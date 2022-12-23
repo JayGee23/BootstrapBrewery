@@ -1,214 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
-    <title>Bootstrap Brewery</title>
-  </head>
+  <link rel="stylesheet" href="/css/styles.css">
 
-  <body>
-    <!--NAVBAR-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-lg-5">
-      
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <title>Bootstrap Brewery</title>
+</head>
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="#">Bootstrap Brewery</a>
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Beer <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Food</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Shop</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Locations</a>
-          </li>
-        </ul>
+<body>
+  <!--NAVBAR-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#">
+        <img src="/img/g437.png" width="400" height="70" alt="brewery logo" loading="lazy">
+      </a>
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link lead" href="#beer">Beer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link lead" href="#">Food</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link lead" href="#">Shop</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--Main image-->
+  <section>
+    <img id="mainImage" class="img-fluid" src="/img/brewerycropped.jpg" alt="">
+  </section>
+
+  <!--Location cards-->
+  <section class="bg-dark p-5">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center text-white">
+          <h3><u>LOCATIONS</u></h3>
+        </div>
+        <div class="col text-center d-none d-sm-block">
+          <button class="btn btn-lg btn-info">Make A Reservation</button>
+        </div>
       </div>
-    </nav>
-    
-    <!--Main image-->
-    <section>
-      <img id="mainImage" class="img-fluid" src="/img/brewerycropped.jpg" alt="">
-    </section>
-    
-    <!--Location cards-->
-    <section class="bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col text-center ">
-            <h3>Locations</h3>
+      <div class="row row-content">
+        <div class="card m-3 col-sm">
+          <img class="img-fluid" src="/img/carlos-blanco-WzPdP9pn7go-unsplash.jpg" alt="">
+          <div class="row align-items-end card-img-overlay ">
+            <a class="btn col" href="#">
+              <h4 class="text-white card-caption">Olympic Village</h4>
+            </a>
           </div>
         </div>
-        <div class="row row-content">
-            <div class="card m-3 col-sm ">
-              <img class="img-fluid" src="/img/carlos-blanco-WzPdP9pn7go-unsplash.jpg" alt="">
-              <div class="row align-items-end card-img-overlay " >
-                <a class="btn col" href="#"><h4 class="text-white card-caption">Olympic Village</h4></a>
-              </div>
-            </div>
-            
-            <div class="card m-3 col-sm ">
-              <img class="img-fluid" src="/img/carlos-blanco-WzPdP9pn7go-unsplash.jpg" alt="">
-              <div class="card-img-overlay row align-items-end " >
-                <a class="btn col" href="#"><h4 class="text-white card-caption">Downtown</h4></a>
-              </div>
-            </div>
-            
-            <div class="card m-3 col-sm ">
-              <img class="img-fluid" src="/img/carlos-blanco-WzPdP9pn7go-unsplash.jpg" alt="">
-              <div class="card-img-overlay row align-items-end " >
-                <a class="btn col" href="#"><h4 class="text-white card-caption">North Vancouver</h4></a>
-              </div>
-            </div>
-        </div>
-      </div>
-    </section>
 
-    <!--Carousel-->
-    <section>
-      <div class="container p-5">
-        <div class="row row-content">
-          <div class="col-md-8 mx-auto">
-            <div id="homeCarousel" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                  <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#homeCarousel" data-slide-to="1"></li>
-                  <li data-target="#homeCarousel" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img class="d-block w-100" src="/img/meritt-thomas-2UsNF4Az-Ko-unsplash.jpg" alt="two beers in brewery">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="/img/giovanna-gomes-_8KV86shhPo-unsplash.jpg" alt="people cheersing">
-                </div>
-                <div class="carousel-item">
-                  <img class="d-block w-100" src="/img/elevate-nYgy58eb9aw-unsplash.jpg" alt="people enjoying a beer on patio of brewery">
-                </div>                
-              </div>
-              <a href="#homeCarousel" class="carousel-control-prev" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon"></span>
-                  <span class="sr-only">Previous</span>
-              </a>
-              <a href="#homeCarousel" class="carousel-control-next" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon"></span>
-                  <span class="sr-only">Next</span>
-              </a>
-              <button class="btn btn-sm btn-info" id="carouselButton">
-                <i class="fa fa-pause"></i>
-              </button>
-            </div>
+        <div class="card m-3 col-sm ">
+          <img class="img-fluid" src="/img/carlos-blanco-WzPdP9pn7go-unsplash.jpg" alt="">
+          <div class="card-img-overlay row align-items-end ">
+            <a class="btn col" href="#">
+              <h4 class="text-white card-caption">Downtown</h4>
+            </a>
+          </div>
+        </div>
+
+        <div class="card m-3 col-sm ">
+          <img class="img-fluid" src="/img/carlos-blanco-WzPdP9pn7go-unsplash.jpg" alt="">
+          <div class="card-img-overlay row align-items-end ">
+            <a class="btn col" href="#">
+              <h4 class="text-white card-caption">North Vancouver</h4>
+            </a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!--Staff cards-->
-    <section id="staff" class="p-5 bg-dark">
-      <div class="container p-5">
-          <h2 class="text-center text-white">Our Staff</h2>
-          <p class="lead text-center text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, beatae!</p>
-          <div class="row g-4">
-
-              <div class="col-md-6 col-lg-3 p-3">
-                  <div class="card bg-light">
-                      <div class="card-body text-center">
-                          <img src="https://randomuser.me/api/portraits/men/73.jpg" class="rounded-circle mb-3"
-                              alt="picture of William">
-                          <h3 class="card-title mb-3">William Doe</h3>
-                          <p class="card-text"><u>Head Brewer</u></p>
-                          <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
-                              commodi deleniti autem rerum nobis eligendi?</p>
-                          <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
-                          <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
-                          <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
-                          <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
-                      </div>
-                  </div>
+  <!--Carousel-->
+  <section>
+    <div class="container p-5">
+      <div class="row row-content">
+        <div class="col-md-8 mx-auto">
+          <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#homeCarousel" data-slide-to="1"></li>
+              <li data-target="#homeCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="/img/meritt-thomas-2UsNF4Az-Ko-unsplash.jpg" alt="two beers in brewery">
               </div>
-
-              <div class="col-md-6 col-lg-3 p-3">
-                  <div class="card bg-light">
-                      <div class="card-body text-center">
-                          <img src="https://randomuser.me/api/portraits/women/57.jpg" class="rounded-circle mb-3"
-                              alt="picture of Carla">
-                          <h3 class="card-title mb-3">Carla Ruggieri</h3>
-                          <p class="card-text"><u>Operations Manager</u></p>
-                          <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
-                              commodi deleniti autem rerum nobis eligendi?</p>
-                          <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
-                          <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
-                          <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
-                          <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
-                      </div>
-                  </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="/img/giovanna-gomes-_8KV86shhPo-unsplash.jpg" alt="people cheersing">
               </div>
-
-              <div class="col-md-6 col-lg-3 p-3">
-                  <div class="card bg-light">
-                      <div class="card-body text-center">
-                          <img src="https://randomuser.me/api/portraits/women/8.jpg" class="rounded-circle mb-3"
-                              alt="picture of Jane">
-                          <h3 class="card-title mb-3">Jane Conner</h3>
-                          <p class="card-text"><u>Owner</u></p>
-                          <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
-                              commodi deleniti autem rerum nobis eligendi?</p>
-                          <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
-                          <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
-                          <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
-                          <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
-                      </div>
-                  </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="/img/elevate-nYgy58eb9aw-unsplash.jpg"
+                  alt="people enjoying a beer on patio of brewery">
               </div>
-
-              <div class="col-md-6 col-lg-3 p-3">
-                  <div class="card bg-light">
-                      <div class="card-body text-center">
-                          <img src="https://randomuser.me/api/portraits/men/83.jpg" class="rounded-circle mb-3"
-                              alt="picture of Jeffery">
-                          <h3 class="card-title mb-3">Jeffery Adams</h3>
-                          <p class="card-text"><u>Event Manager</u></p>
-                          <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
-                              commodi deleniti autem rerum nobis eligendi?</p>
-                          <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
-                          <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
-                          <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
-                          <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
-                      </div>
-                  </div>
-              </div>
+            </div>
+            <a href="#homeCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a href="#homeCarousel" class="carousel-control-next" role="button" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="sr-only">Next</span>
+            </a>
+            <button class="btn btn-sm btn-info" id="carouselButton">
+              <i class="fa fa-pause"></i>
+            </button>
           </div>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!--Beer Media-Objects-->
+  <section id="beer" class="bg-info p-5">
+    <div class="container">
+      <div>
+        <h2 class="mb-5">What's On Tap</h2>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="media">
+            <img class="align-self-start mr-3"
+              src="/img/vecteezy_beer-bottle-and-glass-of-beer-isolated-on-white-background_.jpg"
+              alt="image of a lager beer">
+            <div class="media-body">
+              <h4 class="mt-0">Bootstrap Lager</h4>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam deleniti blanditiis deserunt cumque adipisci asperiores natus alias, veritatis saepe culpa, dolore minus quos eius debitis, vitae aliquam facere iusto eaque?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light p-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="media">
+            <div class="media-body">
+              <h4 class="mt-0 mb-1">Source Code IPA</h4>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, animi? Error totam similique nobis obcaecati ullam iure, fuga eaque cupiditate corporis et dolorum perspiciatis nam, dolor explicabo quo nesciunt exercitationem!</p>
+            </div>
+            <img class="align-self-start mr-3"
+              src="/img/vecteezy_beer-bottle-and-glass-of-beer-isolated-on-white-background_.jpg"
+              alt="image of a lager beer">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-info p-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="media">
+            <img class="align-self-start mr-3"
+              src="/img/vecteezy_beer-bottle-and-glass-of-beer-isolated-on-white-background_.jpg"
+              alt="image of a lager beer">
+            <div class="media-body">
+              <h4 class="mt-0">Blockchain ESB</h4>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat aliquid officiis temporibus dicta voluptatem, minus optio recusandae, eum expedita rem est commodi fuga incidunt numquam obcaecati odit doloremque ipsum libero.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light p-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="media">
+            <div class="media-body">
+              <h4 class="mt-0 mb-1">Infinte Loop Stout</h4>
+              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime assumenda, id corporis sed dolore commodi, eos optio suscipit tempore repellat, natus dicta? Sequi ipsum optio modi, quod illo repellendus aspernatur.</p>
+            </div>
+            <img class="align-self-start mr-3"
+              src="/img/vecteezy_beer-bottle-and-glass-of-beer-isolated-on-white-background_.jpg"
+              alt="image of a lager beer">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Staff cards-->
+  <section id="staff" class="p-5 bg-dark">
+    <div class="container p-5">
+      <h2 class="text-center text-white">Our Staff</h2>
+      <p class="lead text-center text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
+        beatae!</p>
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-3 p-3">
+          <div class="card bg-light">
+            <div class="card-body text-center">
+              <img src="https://randomuser.me/api/portraits/men/73.jpg" class="rounded-circle mb-3"
+                alt="picture of William">
+              <h3 class="card-title mb-3">William Doe</h3>
+              <p class="card-text"><u>Head Brewer</u></p>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
+                commodi deleniti autem rerum nobis eligendi?</p>
+              <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 p-3">
+          <div class="card bg-light">
+            <div class="card-body text-center">
+              <img src="https://randomuser.me/api/portraits/women/57.jpg" class="rounded-circle mb-3"
+                alt="picture of Carla">
+              <h3 class="card-title mb-3">Carla Ruggieri</h3>
+              <p class="card-text"><u>Operations Manager</u></p>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
+                commodi deleniti autem rerum nobis eligendi?</p>
+              <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 p-3">
+          <div class="card bg-light">
+            <div class="card-body text-center">
+              <img src="https://randomuser.me/api/portraits/women/8.jpg" class="rounded-circle mb-3"
+                alt="picture of Jane">
+              <h3 class="card-title mb-3">Jane Conner</h3>
+              <p class="card-text"><u>Owner</u></p>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
+                commodi deleniti autem rerum nobis eligendi?</p>
+              <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 p-3">
+          <div class="card bg-light">
+            <div class="card-body text-center">
+              <img src="https://randomuser.me/api/portraits/men/83.jpg" class="rounded-circle mb-3"
+                alt="picture of Jeffery">
+              <h3 class="card-title mb-3">Jeffery Adams</h3>
+              <p class="card-text"><u>Event Manager</u></p>
+              <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate
+                commodi deleniti autem rerum nobis eligendi?</p>
+              <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+              <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
 
 
 
-    <footer>
+  <footer>
 
-    </footer>
+  </footer>
 
-    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/js/scripts.js"></script>
-  </body>
+  <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="/js/scripts.js"></script>
+</body>
 
 </html>
