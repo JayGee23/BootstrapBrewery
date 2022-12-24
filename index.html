@@ -33,10 +33,10 @@
           <a class="nav-link lead" href="#beer">Beer</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link lead" href="#">Food</a>
+          <a class="nav-link lead" href="#food">Food</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link lead" href="#">Shop</a>
+          <a class="nav-link lead" href="" data-toggle="tooltip" data-placement="bottom" title="COMING SOON">Shop</a>
         </li>
       </ul>
     </div>
@@ -44,18 +44,18 @@
 
   <!--Main image-->
   <section>
-    <img id="mainImage" class="img-fluid" src="/img/brewerycropped.jpg" alt="">
+    <img id="mainImage" class="img-fluid" src="/img/brewerycropped.jpg" alt="people enjoying a brewery">
   </section>
 
   <!--Location cards-->
   <section class="bg-dark p-5">
     <div class="container">
       <div class="row">
-        <div class="col text-right text-white">
+        <div class="col text-sm-right text-white">
           <h3><u>Where to Upload</u></h3>
         </div>
         <div class="col pl-5 d-none d-sm-block">
-          <button class="btn btn-lg btn-info">Make A Reservation</button>
+          <button class="btn btn-lg btn-info" data-toggle="modal" data-target="#reserveModal">Reserve A Table</button>
         </div>
       </div>
       <div class="row row-content">
@@ -89,10 +89,67 @@
     </div>
   </section>
 
+  <!--Reservation Modal-->
+  <section>
+    <div id="reserveModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-primary">
+            <h3 class="modal-title text-white">Reserve a Table</h3>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form id="reserveForm">
+                <div class="row form-group">
+                  <label class="col-sm-6 col-form-label" for="numDiners">Number of People</label>
+                  <div class="col-sm-6">
+                    <select class="form-control" name="numDiners" id="numDiners">
+                      <option value="">Select...</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <label class="col-sm-6 col-form-label" for="date">Date</label>
+                  <div class="col-sm-6">
+                    <input class="form-control" type="date" id="date" name="date">
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <label for="first-name" class="col-form-label col-sm-6">First Name:</label>
+                  <input type="text" class="form-control col-sm-6" id="first-name" placeholder="Name...">
+                </div>
+                <div class="row form-group">
+                  <label for="email" class="col-form-label col-sm-6">Email:</label>
+                  <input type="text" class="form-control col-sm-6" id="email" placeholder="Email...">
+                </div>
+                <div class="row form-group">
+                  <div class="col">
+                    <button type="submit" class="btn btn-info" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Reserve</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!--Carousel-->
   <section class="bg-light">
     <div class="container p-5">
-      <h2 class="text-center p-3">Good Beers === Good Times</h2>
+      <div class="row">
+        <h2 class="col text-center p-3">Good Beers === Good Times</h2>
+      </div>
       <div class="row row-content">
         <div class="col-md-8 mx-auto">
           <div id="homeCarousel" class="carousel slide" data-ride="carousel">
@@ -144,7 +201,9 @@
               alt="image of a lager beer">
             <div class="media-body">
               <h4 class="mt-0">Bootstrap Lager</h4>
-              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam deleniti blanditiis deserunt cumque adipisci asperiores natus alias, veritatis saepe culpa, dolore minus quos eius debitis, vitae aliquam facere iusto eaque?</p>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam deleniti blanditiis deserunt
+                cumque adipisci asperiores natus alias, veritatis saepe culpa, dolore minus quos eius debitis, vitae
+                aliquam facere iusto eaque?</p>
             </div>
           </div>
         </div>
@@ -159,7 +218,9 @@
           <div class="media">
             <div class="media-body">
               <h4 class="mt-0 mb-1">Source Code IPA</h4>
-              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, animi? Error totam similique nobis obcaecati ullam iure, fuga eaque cupiditate corporis et dolorum perspiciatis nam, dolor explicabo quo nesciunt exercitationem!</p>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, animi? Error totam
+                similique nobis obcaecati ullam iure, fuga eaque cupiditate corporis et dolorum perspiciatis nam, dolor
+                explicabo quo nesciunt exercitationem!</p>
             </div>
             <img class="align-self-start mr-3"
               src="/img/vecteezy_beer-bottle-and-glass-of-beer-isolated-on-white-background_.jpg"
@@ -180,7 +241,9 @@
               alt="image of a lager beer">
             <div class="media-body">
               <h4 class="mt-0">Blockchain ESB</h4>
-              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat aliquid officiis temporibus dicta voluptatem, minus optio recusandae, eum expedita rem est commodi fuga incidunt numquam obcaecati odit doloremque ipsum libero.</p>
+              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat aliquid officiis
+                temporibus dicta voluptatem, minus optio recusandae, eum expedita rem est commodi fuga incidunt numquam
+                obcaecati odit doloremque ipsum libero.</p>
             </div>
           </div>
         </div>
@@ -195,7 +258,9 @@
           <div class="media">
             <div class="media-body">
               <h4 class="mt-0 mb-1">Infinte Loop Stout</h4>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime assumenda, id corporis sed dolore commodi, eos optio suscipit tempore repellat, natus dicta? Sequi ipsum optio modi, quod illo repellendus aspernatur.</p>
+              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime assumenda, id corporis
+                sed dolore commodi, eos optio suscipit tempore repellat, natus dicta? Sequi ipsum optio modi, quod illo
+                repellendus aspernatur.</p>
             </div>
             <img class="align-self-start mr-3"
               src="/img/vecteezy_beer-bottle-and-glass-of-beer-isolated-on-white-background_.jpg"
@@ -206,9 +271,28 @@
     </div>
   </section>
 
-  <!--Staff cards-->
-  <section id="staff" class="p-5 bg-dark">
+  <!--Food-->
+  <section id="food" class="bg-info">
     <div class="container p-5">
+      <h2 class="pb-4">Menus</h2>
+      <div class="row text-center">
+        <div class="col-xs-12 col-sm-4 p-3">
+          <a href="/img/menu.png" class="btn btn-lg btnFood" target="_blank">Happy Hour</a>
+        </div>
+        <div class="col-xs-12 col-sm-4 p-3">
+          <a href="/img/menu.png" class="btn btn-lg btnFood" target="_blank">Lunch</a>
+        </div>
+        <div class="col-xs-12 col-sm-4 p-3">
+          <a href="/img/menu.png" class="btn btn-lg btnFood" target="_blank">Dinner</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--Staff cards-->
+  <section id="staff" class="p-4 bg-dark">
+    <div class="container p-4">
       <h2 class="text-center text-white">Our Staff</h2>
       <p class="lead text-center text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
         beatae!</p>
@@ -286,7 +370,7 @@
   </section>
 
   <!--Footer-->
-  <footer id="footer" class= "footer p-5">
+  <footer id="footer" class="footer p-5">
     <div class="container">
       <div class="row align-items-end">
         <div class="col pt-5 text-sm-left text-center">
@@ -303,6 +387,11 @@
             </div>
             <button class="btn btn-outline-dark btn-block" type="button">Subscribe</button>
           </form>
+          <div class="text-center">
+            <a class="btn btn-social-icon btn-instagram btn-lg" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+            <a class="btn btn-social-icon btn-facebook btn-lg" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+            <a class="btn btn-social-icon btn-twitter btn-lg" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+          </div>
         </div>
         <div class="col pt-5-sm text-sm-right text-center">
           <p><strong>Olympic Village + Downtown</strong><br>Mon - Thurs: 11AM -10PM<br>Fri - Sun: 11AM-11PM</p>
