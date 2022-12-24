@@ -51,10 +51,10 @@
   <section class="bg-dark p-5">
     <div class="container">
       <div class="row">
-        <div class="col text-center text-white">
-          <h3><u>LOCATIONS</u></h3>
+        <div class="col text-right text-white">
+          <h3><u>Where to Upload</u></h3>
         </div>
-        <div class="col text-center d-none d-sm-block">
+        <div class="col pl-5 d-none d-sm-block">
           <button class="btn btn-lg btn-info">Make A Reservation</button>
         </div>
       </div>
@@ -90,8 +90,9 @@
   </section>
 
   <!--Carousel-->
-  <section>
+  <section class="bg-light">
     <div class="container p-5">
+      <h2 class="text-center p-3">Good Beers === Good Times</h2>
       <div class="row row-content">
         <div class="col-md-8 mx-auto">
           <div id="homeCarousel" class="carousel slide" data-ride="carousel">
@@ -284,11 +285,31 @@
     </div>
   </section>
 
-
-
-
-  <footer>
-
+  <!--Footer-->
+  <footer id="footer" class= "footer p-5">
+    <div class="container">
+      <div class="row align-items-end">
+        <div class="col pt-5 text-sm-left text-center">
+          <p><strong>Olympic Village</strong> <br>1345 Clark Dr. Vancouver</p>
+          <p><strong>Downtown</strong> <br>1050 W Pender, Vancouver</p>
+          <p><strong>North Vancouver</strong> <br>266 1st St E, North Vancouver</p>
+        </div>
+        <div class="col-sm-4 pb-5">
+          <img class="mx-auto d-block" src="/img/logo.png" alt="" width="180" height="auto">
+          <form action="">
+            <div class="form-group text-center">
+              <label for="subscribe">Stay In The Loop</label>
+              <input type="email" class="form-control" id="subscribe" placeholder="email...">
+            </div>
+            <button class="btn btn-outline-dark btn-block" type="button">Subscribe</button>
+          </form>
+        </div>
+        <div class="col pt-5-sm text-sm-right text-center">
+          <p><strong>Olympic Village + Downtown</strong><br>Mon - Thurs: 11AM -10PM<br>Fri - Sun: 11AM-11PM</p>
+          <p><strong>North Vancouver</strong><br>Sun - Thurs: 11AM -10PM<br>Fri - Sat: 10AM-11PM</p>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
