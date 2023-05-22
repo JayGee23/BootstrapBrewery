@@ -19,6 +19,12 @@
     padding: 3px;
 }
 
+.card-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
 .footer {
     text-transform: uppercase;
 }
